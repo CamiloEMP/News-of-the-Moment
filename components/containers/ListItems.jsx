@@ -7,7 +7,7 @@ export const ListItems = ({ data, path }) => {
       {valuesOfData.map((value, index) => (
         <li key={index}>
           <Link href={`/${path}/${value[0]}`}>
-            <a>{value[1]}</a>
+            <a className="text-white lg:text-black">{value[1]}</a>
           </Link>
         </li>
       ))}

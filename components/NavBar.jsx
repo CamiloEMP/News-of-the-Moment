@@ -7,10 +7,10 @@ export const NavBar = () => {
   const [sideMenu, setSideMenu] = useState(true)
   return (
     <>
-      <h1 className="text-4xl font-bold lg:text-5xl">NEWS OF THE MOMENT</h1>
+      <h1 className="text-4xl text-white font-bold lg:text-5xl">NEWS OF THE MOMENT</h1>
       <nav>
         <IoMenu
-          className="text-4xl z-20 relative"
+          className="text-4xl text-white z-20 relative lg:hidden"
           onClick={() => setSideMenu(!sideMenu)} />
       </nav>
       {sideMenu && (

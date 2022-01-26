@@ -3,5 +3,5 @@ export async function getCountryNews (url, apiKey, country = 'co') {
   fetch(`${url}/top-headlines?country=${country}&apikey=${apiKey}`)
 
   const data = await res.json()
-  return data
+  return { data }
 }
