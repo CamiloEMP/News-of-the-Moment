@@ -10,7 +10,7 @@ import '../styles/globals.css'
 import { Footer } from '../components/Footer'
 
 function MyApp ({ Component, pageProps }) {
-  const [country, setCountry] = useState('')
+  const [city, setCity] = useState('')
 
   return (
     <>
@@ -18,12 +18,12 @@ function MyApp ({ Component, pageProps }) {
         className="flex justify-evenly items-center w-full h-36 mb-12 bg-rose-700 lg:justify-center px-6">
         <NavBar/>
       </header>
-      <ChangeCountry/>
+      <ChangeCountry city={city} setCity={setCity}/>
       <main className="px-4 lg:grid lg:grid-cols-[20%_60%_20%] relative">
         <aside className="hidden lg:block">
           <ListItems data={categorys} path='category'/>
         </aside>
-        <Component {...pageProps} country={country} setCountry={setCountry} />
+        <Component {...pageProps} city={city} setCity={setCity} />
         <aside className="hidden lg:block">
           <ListItems data={sources} path='news'/>
         </aside>
